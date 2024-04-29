@@ -1,6 +1,6 @@
 **Nome do Projeto:** Jogo da velha com Arduino
 
-**Autor:** David de Andrade
+**Autor:** David de Andrade Silva
 
 # JogoDaVelhaArduino
 Objetivo do jogo: O jogo tem um objetivo estrategico e divertido onde Jogadores de forma rapida iniciam jogadas em uma tabela 3x3 sendo vertical, horizontal ou diagonal.
