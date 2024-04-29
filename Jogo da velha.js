@@ -29,18 +29,18 @@
     // Anotar/registrar a jogada do primeiro jogador
     velha = 1;
     do {
-        window.alert(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-        window.alert(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-        window.alert(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+        console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
+        console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
+        console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
         jogada = "";
-        window.alert("Digite a posição da sua peça Jogador" + jogadorDaVez);
+        console.log("Digite a posição da sua peça Jogador" + jogadorDaVez);
         jogada = window.prompt('Enter a value for jogada');
 
         // Simula a função Serial.parseInt() do Arduino
         if (validaPosicao(jogada)) {
             linha = parseInt(jogada.charAt(0));
             coluna = parseInt(jogada.charAt(2));
-            window.alert("Linha:" + linha + "; Coluna:" + coluna);
+            console.log("Linha:" + linha + "; Coluna:" + coluna);
             if (tabuleiro[3 * linha + coluna] == 0) {
                 tabuleiro[3 * linha + coluna] = jogadorDaVez;
                 resultadoValidaTabuleiro = validaTabuleiro(tabuleiro, jogadorDaVez);
@@ -53,18 +53,18 @@
                 }
                 velha = velha + 1;
             } else {
-                window.alert("Esta posição esta ocupada" + jogadorDaVez + "jogue novamente!!!");
+                console.log("Esta posição esta ocupada" + jogadorDaVez + "jogue novamente!!!");
 
                 // informar ao jogador 1 que a posição está preenchida, é invalida e ele precisa informar uma posição válida
             }
         } else {
-            window.alert("Numero invalido, digite uma casa novamente");
+            console.log("Numero invalido, digite uma casa novamente");
         }
     } while (resultadoValidaTabuleiro == 0);
     if (velha <= 9) {
-        window.alert("Infelizmente deu velha");
+        console.log("Infelizmente deu velha");
     } else {
-        window.alert("parabens pela vitoria, jogador" + jogadorDaVez);
+        console.log("parabens pela vitoria, jogador" + jogadorDaVez);
     }
 }
 
@@ -87,7 +87,7 @@ function validaTabuleiro(tabuleiro, jogadorDaVez) {
     var retorno;
 
     retorno = 0;
-    window.alert(jogadorDaVez);
+    console.log(jogadorDaVez);
     if (tabuleiro[0] == jogadorDaVez && tabuleiro[1] == jogadorDaVez && tabuleiro[2] == jogadorDaVez || tabuleiro[3] == jogadorDaVez && tabuleiro[4] == jogadorDaVez && tabuleiro[5] == jogadorDaVez || tabuleiro[6] == jogadorDaVez && tabuleiro[7] == jogadorDaVez && tabuleiro[8] == jogadorDaVez) {
         retorno = 2;
     } else {
