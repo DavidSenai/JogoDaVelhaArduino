@@ -60,11 +60,11 @@
         } else {
             console.log("Numero invalido, digite uma casa novamente");
         }
-    } while (resultadoValidaTabuleiro == 0);
-    if (velha <= 9) {
-        console.log("Infelizmente deu velha");
-    } else {
+    } while (!haVencedor && velha <= 9);
+    if (haVencedor) {
         console.log("parabens pela vitoria, jogador" + jogadorDaVez);
+    } else {
+        console.log("Infelizmente deu velha");
     }
 }
 
