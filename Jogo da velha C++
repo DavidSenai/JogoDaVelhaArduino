@@ -11,9 +11,10 @@ void setup() {
    while(!Serial) {
     // Aguarda a Serial
    }
+}
 
-
-  // Criar o tabuleiro e jogadores, zerar as variáveis.
+void loop(){
+ // Criar o tabuleiro e jogadores, zerar as variáveis.
   //
   // 0: Posição vazia
   // 1: jogada na Posição do jogador 1
@@ -127,9 +128,7 @@ void setup() {
   Serial.print(tabuleiro[7]);
   Serial.println(tabuleiro[8]);
 }
-void loop() {
-
-}
+  
 
 bool validaPosicao(String entrada) {
   bool entradaValida;
